@@ -1,15 +1,14 @@
 package bytebank;
 
-public class Funcionario {
+public abstract class Funcionario { //Não podemos instaciar objetos dessa classe.
 	
 	private String nome;
 	private String cpf;
 	private double salario;
 	
 	//Getters
-	public double getBonificacao() {
-		return this.salario * 0.1;
-	}	
+	//Método sem corpo! Os filhos precisam implementar obrigatoriamente!
+	public abstract double getBonificacao();	
 	
 	public String getNome() {
 		return nome;		

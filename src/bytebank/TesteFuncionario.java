@@ -3,7 +3,7 @@ package bytebank;
 public class TesteFuncionario {
 	public static void main(String[] args) {
 		
-		Funcionario teste = new Funcionario();
+		Funcionario teste = new Gerente();
 		
 		teste.setNome("Diogo");
 		teste.setCpf("999.999.999-99");
@@ -28,20 +28,19 @@ public class TesteFuncionario {
 		System.out.println("Salário do gerente: " + gerente1.getSalario());
 		System.out.println("Senha correta: " + autenticacao);
 		
-		Gerente gerente2 = new Gerente();
-		Funcionario funcionario = new Funcionario();
+		//Funcionario funcionario = new Funcionario(); //Funcionario agora é abstrato não pode ser instanciado!
+		Gerente gerente2 = new Gerente();		
 		Caixa caixa = new Caixa();
 		Estagiario estagiario = new Estagiario();
 		ControleBonificacao controle =  new ControleBonificacao();
 		
-		gerente2.setSalario(5000.0);
-		funcionario.setSalario(2000.0);
+		//funcionario.setSalario(2000.0);
+		gerente2.setSalario(5000.0);		
 		caixa.setSalario(2500.0);
 		estagiario.setSalario(1000.0);
 		
-		
-		controle.registra(gerente2);
-		controle.registra(funcionario);
+		//controle.registra(funcionario);
+		controle.registra(gerente2);		
 		controle.registra(caixa);
 		
 		System.out.println("Total de bonificacao: " + controle.getSoma());

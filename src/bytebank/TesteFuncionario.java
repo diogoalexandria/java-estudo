@@ -31,7 +31,14 @@ public class TesteFuncionario {
 		Gerente gerente2 = new Gerente();
 		Funcionario funcionario = new Funcionario();
 		Caixa caixa = new Caixa();
+		Estagiario estagiario = new Estagiario();
 		ControleBonificacao controle =  new ControleBonificacao();
+		
+		gerente2.setSalario(5000.0);
+		funcionario.setSalario(2000.0);
+		caixa.setSalario(2500.0);
+		estagiario.setSalario(1000.0);
+		
 		
 		controle.registra(gerente2);
 		controle.registra(funcionario);

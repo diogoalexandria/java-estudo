@@ -28,5 +28,18 @@ public class TesteFuncionario {
 		System.out.println("Salário do gerente: " + gerente1.getSalario());
 		System.out.println("Senha correta: " + autenticacao);
 		
+		Gerente gerente2 = new Gerente();
+		Funcionario funcionario = new Funcionario();
+		Caixa caixa = new Caixa();
+		ControleBonificacao controle =  new ControleBonificacao();
+		
+		controle.registra(gerente2);
+		controle.registra(funcionario);
+		controle.registra(caixa);
+		
+		System.out.println("Total de bonificacao: " + controle.getSoma());
+		
+		
+		
 	}
 }

@@ -28,7 +28,7 @@ public class Teste {
 		System.out.println("Sal·rio do gerente: " + gerente1.getSalario());
 		System.out.println("Senha correta: " + autenticacao);
 		
-		//Funcionario funcionario = new Funcionario(); //Funcionario agora √© abstrato n√£o pode ser instanciado!
+		//Funcionario funcionario = new Funcionario(); //Funcionario agora È abstrato n„o pode ser instanciado!
 		Gerente gerente2 = new Gerente();		
 		Caixa caixa = new Caixa();
 		Estagiario estagiario = new Estagiario();
@@ -52,6 +52,7 @@ public class Teste {
 		
 		SistemaInterno sistema = new SistemaInterno();
 		sistema.autentica(gerente3);
-		sistema.autentica(administrador);
+		sistema.autentica(administrador);		
+		
 	}
 }

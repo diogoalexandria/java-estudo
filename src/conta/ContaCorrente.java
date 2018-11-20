@@ -1,6 +1,6 @@
 package conta;
 
-public class ContaCorrente extends Conta {
+public class ContaCorrente extends Conta implements Tributavel {
 	
 	public ContaCorrente(int agencia, int numero) {
 		super(agencia, numero);//O java já faz implicitamente sem precisar chamar se for construtores padrões.
@@ -15,5 +15,10 @@ public class ContaCorrente extends Conta {
 	@Override
 	public void deposita(double valor) {
 		super.saldo += valor;		
+	}
+
+	@Override
+	public double getValor() {
+		return super.saldo * 0.01;
 	}
 }

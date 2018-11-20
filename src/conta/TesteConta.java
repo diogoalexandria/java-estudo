@@ -10,13 +10,23 @@ public class TesteConta {
 		
 		ContaPoupanca contaPoupanca = new ContaPoupanca(222, 22222);
 		contaPoupanca.deposita(200.0);
-		System.out.println("Saldo da conta poupanÃ§a: " + contaPoupanca.getSaldo());
+		System.out.println("Saldo da conta poupança: " + contaPoupanca.getSaldo());
 		
 		System.out.println("Tranferindo...");
 		contaCorrente.transfere(10.0, contaPoupanca);
 		
 		System.out.println("Saldo da conta corrente: " + contaCorrente.getSaldo());
-		System.out.println("Saldo da conta poupanÃ§a: " + contaPoupanca.getSaldo());
+		System.out.println("Saldo da conta poupança: " + contaPoupanca.getSaldo());
+		
+		SeguroDeVida seguroDeVida = new SeguroDeVida();
+		
+		CalculadorImposto calculadorImposto = new CalculadorImposto();
+		System.out.println("Registrando Conta Corrente...");
+		calculadorImposto.registra(contaCorrente);
+		System.out.println("Total de imposto: " + calculadorImposto.getValorImposto());
+		System.out.println("Registrando Seguro de vida...");
+		calculadorImposto.registra(seguroDeVida);
+		System.out.println("Total de imposto: " + calculadorImposto.getValorImposto());
 
 	}
 
